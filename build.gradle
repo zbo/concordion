@@ -1,0 +1,44 @@
+defaultTasks 'clean', 'build'
+
+apply plugin: 'java'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+wrapper {
+    gradleVersion = "2.2"
+}
+
+dependencies {
+    compile 'com.google.guava:guava:18.0'
+    compile 'junit:junit:4.12'
+    compile 'org.concordion:concordion:1.5.0'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.concordion:concordion:1.5.0'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'src'
+        }
+    }
+    test {
+        java {
+            srcDir 'specs'
+        }
+        resources {
+            srcDir 'specs'
+        }
+    }
+}
+
+test {
+    systemProperties['concordion.output.dir'] = "${reporting.baseDir}"
+}

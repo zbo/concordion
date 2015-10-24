@@ -1,0 +1,42 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<link href="../../concordion.css" rel="stylesheet" type="text/css" />
+<body>
+
+    <h1>Encryption</h1>
+
+    <p>
+    	this library should provide encryption and decryption for user password
+    </p>
+
+    <div class="example">
+
+		<h3>Example</h3>
+		<table>
+            <tr><td>
+                <p>
+                    When user <b concordion:set="#firstName">World</b>
+                    logs in, the greeting will be:
+                    <b concordion:assertEquals="greetingFor(#firstName)">Hello, World!</b>
+                </p>
+            </td></tr>
+            <tr><td>
+                <p>
+                    When user input password as <b concordion:set="#password">P@ssword</b>
+                    actual password saved to database should be:
+                    <b concordion:assertEquals="encryption(#password)">XvpjmDGOHel2r+gYMoV7kQ==</b>
+                </p>
+            </td></tr>
+            <tr><td>
+                <p>
+                    When system retrieve encrypted password as <b concordion:set="#password">XvpjmDGOHel2r+gYMoV7kQ==</b>
+                    decrypted password should be:
+                    <b concordion:assertEquals="decryption(#password)">P@ssword</b>
+                </p>
+            </td></tr>
+        </table>
+
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="specs.bob.Should_pass_encryptionFixture" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-10-24T06:39:26" hostname="LMXMN031" time="0.349">
+  <properties/>
+  <testcase name="[Concordion Specification for 'Should_pass_encryptionFixture" classname="specs.bob.Should_pass_encryptionFixture" time="0.349"/>
+  <system-out><![CDATA[Key : aWxkc2tleQ==
+encrypted： XvpjmDGOHel2r+gYMoV7kQ==
+Key : aWxkc2tleQ==
+original： P@ssword
+/Users/bob.zhu/project/concordion-kickstart/build/reports/specs/bob/Should_pass_encryption.html
+Successes: 3, Failures: 0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
